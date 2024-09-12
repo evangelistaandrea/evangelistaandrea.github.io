@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -15,31 +14,29 @@
             background-color: #edeae3;
         }
 
-        /* Header styles */
         header {
             background-color: #fff;
             padding: 40px 20px;
             border-bottom: 2px solid #bc9667;
         }
 
-        /* Container for header content */
         .header-content {
             display: flex;
             align-items: center;
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            flex-wrap: wrap;
+            
         }
 
-         /* Picture */
-         .profile-img {
+        .profile-img {
             width: 200px;
             height: 200px;
             border-radius: 15px;
             border: 4px solid #bc9667;
-         }
+        }
 
-        /* Divider */
         .divider {
             width: 1px;
             background-color: #bc9667;
@@ -47,36 +44,33 @@
             margin: 0 20px;
         }
 
-        /* Buttons container */
-        .buttons-container {
+        .header-info {
+            flex: 1;
             display: flex;
-            flex-direction: row;
-            gap: 10px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
-        /* Name */
-        .header-content h1 {
+        .header-info h1 {
             margin: 0;
             font-size: 2.5rem;
             color: #bc9667;
         }
 
-        /* Description */
         .description {
             font-size: 1.2rem;
             color: #1b1b1b;
             margin-top: 20px;
-            text-align: left;
         }
 
-        /* Buttons container */
         .buttons-container {
-            display: row;
+            display: flex;
             gap: 15px;
             margin-top: 20px;
+            justify-content: center;
         }
 
-        /* Buttons */
         .buttons-container a {
             display: inline-block;
             width: 150px;
@@ -95,24 +89,69 @@
             background-color: #8a6f4d;
         }
 
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .divider {
+                display: none;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .header-info h1 {
+                font-size: 2rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .buttons-container a {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-info h1 {
+                font-size: 1.5rem;
+            }
+
+            .description {
+                font-size: 0.9rem;
+            }
+
+            .buttons-container a {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <!-- Picture -->
             <img src="pic.jpg" alt="Andrea Evangelista" class="profile-img">
-
             <div class="divider"></div>
-
-            <div>
+            <div class="header-info">
                 <h1>Andrea Evangelista</h1>
-                <p class="description">I am a second-year IT student with a passion UI/UX Designing. I am constantly learning and working on projects to enhance my skills and contribute to innovative solutions.</p>
-                <!-- Buttons -->
+                <p class="description">I am a second-year IT student with a passion for UI/UX design. I am constantly learning and working on projects to enhance my skills and contribute to innovative solutions.</p>
                 <div class="buttons-container">
                     <a href="#projects">Projects</a>
                     <a href="#resume">Resume</a>
-                    <a href="https://www.linkedin.com/in/chuchu" target="">LinkedIn Account</a>
+                    <a href="https://www.linkedin.com/in/chuchu" target="_blank">LinkedIn Account</a>
                 </div>
             </div>
         </div>
